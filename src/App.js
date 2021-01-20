@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from './components/Home';
 import Login from './components/Login';
 import Signup from './components/Signup';
-
+import Message from './components/Messages';
+import SendMessage from './components/SendMessage';
 
 function App() {
   return (
@@ -18,8 +19,10 @@ function App() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <Link className="nav-item nav-link" to="/login">Login</Link>
-              <Link className="nav-item nav-link" to="/signup">Signup</Link>
+              <Link className="nav-item nav-link" to="/login">Giriş</Link>
+              <Link className="nav-item nav-link" to="/signup">Kayıt Ol</Link>
+              <Link className="nav-item nav-link" to="/send-message">Mesaj Gönder</Link>
+              <Link className="nav-item nav-link" to="/message">Mesaj Listele</Link>
             </div>
           </div>
         </nav>
@@ -29,6 +32,12 @@ function App() {
           </Route>
           <Route path="/signup">
             <Signup />
+          </Route>
+          <Route path="/send-message">
+            <SendMessage />
+          </Route>
+          <Route path="/message">
+            <Message />
           </Route>
           <Route path="/">
             <Home />
