@@ -27,7 +27,9 @@ const SendMessage = () => {
         <div className="container">
         <div className="row justify-content-center">
             <div className="col-sm-6">
-                <h2>Giriş Sayfası</h2>
+                <h2>Mesaj Gönderme Sayfası</h2>
+                <span>Buradan mesaj gönderip son mesajımızı mesaj listele sekmesinden görebiliriz.</span>
+                <p>Test amaçlı, varsayılan olarak userId'ler girilmiştir.</p>
                 <hr/>
                 <form onSubmit={messageToUser}>
                     <div className="form-group">
